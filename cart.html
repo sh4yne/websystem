@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce Website - Shopping Cart | Codehal</title>
+    <link rel="stylesheet" href="cart.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+
+<body>
+<header> 
+  <a href="index.html" class="logo">GigaMobile Store</a>
+  <div id="cart-icon">
+    <i class="ri-shopping-bag-line"></i>
+    <span class="cart-item-count">0</span>
+  </div>
+</header>
+
+<div class="cart">
+    <i class="ri-close-line" id="cart-close"></i> <!-- Move close button here -->
+    <div class="cart-content">
+        <!-- Cart content goes here -->
+    </div>        
+    
+    <div class="total">
+        <div class="total-title">Total</div>
+        <div class="total-price">$100</div>
+        <button id="buy-now" onclick="showCheckout()">Buy Now</button>
+    </div>
+</div>
+
+<div class="checkout-form" style="display: none;" id="checkout-form">
+    <h2>Enter your details to complete the purchase</h2>
+    <form id="checkout-form">
+        <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required placeholder="Enter your full name">
+        </div>
+        <div class="form-group">
+            <label for="address">Address</label>
+            <input type="text" id="address" name="address" required placeholder="Enter your address">
+        </div>
+        <div class="form-group">
+            <label for="payment">Payment Method</label>
+            <select id="payment" name="payment" required>
+                <option value="credit">Credit Card</option>
+                <option value="paypal">PayPal</option>
+                <option value="bank">Bank Transfer</option>
+            </select>
+        </div>
+        
+        <h4>Order Summary:</h4>
+        <ul id="order-summary" style="list-style: none; padding: 0;"></ul>
+        <p>Total: <strong id="checkout-total-price">$0.00</strong></p>
+        <button type="submit">Submit Order</button>
+    </form>
+</div>
+
+<!-- Shop Section (Product Listings) -->
+<section class="shop">
+    <h1 class="section-title">Shop Products</h1>
+    <div class="product-content" id="product-section">
+        <!-- Product 1 -->
+        <div class="product-box">
+            <div class="img-box">
+                <img src="images/product1.jpg" alt="Product 1">
+            </div>
+            <h2 class="product-title">Iphone 7</h2>
+            <div class="price-and-cart">
+                <span class="price">$89.99</span>
+                <i class="ri-shopping-cart-line add-cart"></i>
+            </div>
+        </div>
+
+        <div class="product-box">
+            <div class="img-box">
+                <img src="images/product2.jpg" alt="Product 2">
+            </div>
+            <h2 class="product-title">Iphone 8</h2>
+            <div class="price-and-cart">
+                <span class="price">$129.99</span>
+                <i class="ri-shopping-cart-line add-cart"></i>
+            </div>
+        </div>
+
+            <div class="product-box">
+                <div class="img-box">
+                    <img src="images/product3.jpg">
+                </div>
+                <h2 class="product-title">Iphone 10</h2>
+                <div class="price-and-cart">
+                    <span class="price">$219.99</span>
+                    <i class="ri-shopping-cart-line add-cart"></i>
+                </div>
+            </div>
+
+            <div class="product-box">
+                <div class="img-box">
+                    <img src="images/product4.jpg">
+                </div>
+                <h2 class="product-title">Iphone 11</h2>
+                <div class="price-and-cart">
+                    <span class="price">$279.99</span>
+                    <i class="ri-shopping-cart-line add-cart"></i>
+                </div>
+            </div>
+
+            <div class="product-box">
+                <div class="img-box">
+                    <img src="images/product5.jpg">
+                </div>
+                <h2 class="product-title">Iphone 12</h2>
+                <div class="price-and-cart">
+                    <span class="price">$329.99</span>
+                    <i class="ri-shopping-cart-line add-cart"></i>
+                </div>
+            </div>
+
+            <div class="product-box">
+                <div class="img-box">
+                    <img src="images/product6.jpg">
+                </div>
+                <h2 class="product-title">Iphone 13</h2>
+                <div class="price-and-cart">
+                    <span class="price">$549.99</span>
+                    <i class="ri-shopping-cart-line add-cart"></i>
+                </div>
+            </div>
+
+            <div class="product-box">
+                <div class="img-box">
+                    <img src="images/product7.jpg">
+                </div>
+                <h2 class="product-title">Iphone 14</h2>
+                <div class="price-and-cart">
+                    <span class="price">$599.99</span>
+                    <i class="ri-shopping-cart-line add-cart"></i>
+                </div>
+            </div>
+
+            <div class="product-box">
+                <div class="img-box">
+                    <img src="images/product8.jpg">
+                </div>
+                <h2 class="product-title">Iphone 15</h2>
+                <div class="price-and-cart">
+                    <span class="price">$679.99</span>
+                    <i class="ri-shopping-cart-line add-cart"></i>
+                </div>
+            </div>
+
+            <div class="product-box">
+                <div class="img-box">
+                    <img src="images/product9.jpg">
+                </div>
+                <h2 class="product-title">Iphone 16</h2>
+                <div class="price-and-cart">
+                    <span class="price">$1199.99</span>
+                    <i class="ri-shopping-cart-line add-cart"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<script src="script.js"></script>
+</body>
+
+</html>
